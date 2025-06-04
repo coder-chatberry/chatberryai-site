@@ -9,7 +9,7 @@ function App() {
       <img src={logo} alt="ChatberryAI Logo" className="logo" />
         <h1>ChatberryAI</h1>
         <p className="tagline">Chat Smarter. Grow Faster.</p>
-        <a href="#contact" className="cta-button">Contact Us</a>
+        <a href="mailto:contact@chatberryai.com" className="cta-button">Contact Us</a>
       </header>
 
       <section className="features">
