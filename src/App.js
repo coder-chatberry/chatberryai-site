@@ -1,47 +1,67 @@
-
 import './App.css';
-import logo from './images/chatberry-logo.jpeg';
+import backgroundLogo from './images/chatberry-logo.jpeg';
 
 function App() {
   return (
     <div className="App">
-      <header className="hero">
-      <img src={logo} alt="ChatberryAI Logo" className="logo" />
-        <h1>ChatberryAI</h1>
-        <p className="tagline">Chat Smarter. Grow Faster.</p>
-        <a href="mailto:contact@chatberryai.com" className="cta-button">Contact Us</a>
+      <div className="sticky-cta" style={{ marginTop: '1rem' }}>
+        <a href="#contact" className="cta-button">Solicitar una Demo Gratis</a>
+      </div>
+
+      <header className="hero hero-bg" style={{ backgroundImage: `url(${backgroundLogo})` }}>
+        <div className="overlay">
+          <p className="tagline">Agentes de IA Modernos para Voz y Mensajería</p>
+        </div>
       </header>
 
+      <div className="cta-below-hero">
+        <a href="#contact" className="cta-button">Obtener una Demo</a>
+      </div>
+
       <section className="features">
-        <h2>What We Do</h2>
-        <div className="feature-grid">
-          <div><h3>Automate</h3><p>Streamline customer service with AI-powered bots.</p></div>
-          <div><h3>Support</h3><p>Improve customer satisfaction with 24/7 responses.</p></div>
-          <div><h3>Personalize</h3><p>Deliver human-like, tailored conversations.</p></div>
+        <h2>Nuestros Productos</h2>
+        <div className="feature-grid responsive-grid">
+          <div>
+            <h3>Agentes de Voz con IA</h3>
+            <p>Automatiza el soporte telefónico, maneja grandes volúmenes de llamadas y ofrece conversaciones naturales con IA de voz.</p>
+          </div>
+          <div>
+            <h3>Agentes de Chat y Mensajería con IA</h3>
+            <p>Despliega chatbots con IA en web, WhatsApp y Messenger para atender a tus clientes 24/7 con respuestas inteligentes.</p>
+          </div>
         </div>
       </section>
 
       <section className="how-it-works">
-        <h2>How It Works</h2>
+        <h2>Cómo Funciona</h2>
         <ol>
-          <li>Integrate with your channels</li>
-          <li>Train the AI on your data</li>
-          <li>Launch smart, natural conversations</li>
+          <li>Conectamos con tus canales de comunicación (teléfono, chat o ambos).</li>
+          <li>Entrenamos la IA con tus datos y escenarios de clientes.</li>
+          <li>Lanzamos, monitoreamos y mejoramos el rendimiento de manera continua.</li>
         </ol>
       </section>
 
+      <section className="trust">
+        <h2>Empresas que Confían</h2>
+        <div className="logo-strip responsive-logo-strip">
+          <img src="/images/client1.png" alt="Cliente 1" />
+          <img src="/images/client2.png" alt="Cliente 2" />
+          <img src="/images/client3.png" alt="Cliente 3" />
+        </div>
+      </section>
+
       <section id="contact" className="contact">
-        <h2>Get in Touch</h2>
+        <h2>Contáctanos</h2>
         <form>
-          <input type="text" placeholder="Name" required />
-          <input type="email" placeholder="Email" required />
-          <textarea placeholder="Message" required></textarea>
-          <button type="submit">Send</button>
+          <input type="text" placeholder="Nombre" required />
+          <input type="email" placeholder="Correo electrónico" required />
+          <textarea placeholder="Cuéntanos sobre tu proyecto..." required></textarea>
+          <button type="submit">Enviar</button>
         </form>
       </section>
 
       <footer>
-        <p>© 2025 ChatberryAI. All rights reserved.</p>
+        <p>© 2025 ChatberryAI. Todos los derechos reservados.</p>
       </footer>
     </div>
   );

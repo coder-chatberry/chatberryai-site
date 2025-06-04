@@ -1,19 +1,58 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #0b0c2a;
+  color: #ffffff;
+}
 
 .App {
   text-align: center;
 }
-.logo {
-  width: 100px;
-  margin-top: 1rem;
+
+/* Sticky call-to-action */
+.sticky-cta {
+  position: sticky;
+  top: 0;
+  background: #0b0c2a;
+  padding: 1rem;
+  text-align: center;
+  z-index: 1000;
 }
+
+.sticky-cta .cta-button {
+  font-size: 0.95rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+}
+
+/* Hero section with background logo */
 .hero {
-  padding: 3rem 1rem;
-  background-color: #0b0c2a;
+  height: 60vh;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  position: relative;
 }
+
+/* Transparent overlay box over logo */
+.overlay {
+  background-color: rgba(11, 12, 42, 0.4); /* more transparent */
+  margin-top: 400px;
+  border-radius: 1rem;
+  text-align: center;
+  max-width: 90%;
+  opacity: 0.6;
+}
+
 .tagline {
   color: #ff79c6;
   font-size: 1.2rem;
+  margin-top: 1rem;
 }
+
+/* CTA button styling */
 .cta-button {
   background-color: #ff79c6;
   color: #0b0c2a;
@@ -21,32 +60,69 @@
   border-radius: 30px;
   font-weight: bold;
   text-decoration: none;
+  transition: background-color 0.3s;
 }
+
+.cta-button:hover {
+  background-color: #ff52b0;
+}
+
+/* Product features */
 .features {
   background-color: #1c1d3a;
   padding: 2rem;
 }
-.feature-grid {
+
+.feature-grid,
+.responsive-grid {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   margin-top: 1rem;
 }
+
 .feature-grid div {
   max-width: 200px;
+  margin: 1rem;
 }
+
+/* How it works */
 .how-it-works {
   background-color: #0b0c2a;
   padding: 2rem;
 }
+
 .how-it-works ol {
   text-align: left;
   max-width: 500px;
   margin: 1rem auto;
 }
+
+/* Trusted by section */
+.trust {
+  background-color: #1c1d3a;
+  padding: 2rem;
+}
+
+.logo-strip {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.logo-strip img {
+  height: 40px;
+  opacity: 0.8;
+}
+
+/* Contact form */
 .contact {
   background-color: #1c1d3a;
   padding: 2rem;
 }
+
 .contact form {
   display: flex;
   flex-direction: column;
@@ -54,12 +130,14 @@
   max-width: 400px;
   margin: 0 auto;
 }
+
 .contact input,
 .contact textarea {
   padding: 0.75rem;
   border: none;
   border-radius: 5px;
 }
+
 .contact button {
   background-color: #ff79c6;
   color: #0b0c2a;
@@ -67,9 +145,63 @@
   padding: 0.75rem;
   border: none;
   border-radius: 30px;
+  transition: background-color 0.3s;
 }
+
+.contact button:hover {
+  background-color: #ff52b0;
+}
+
+/* Footer */
 footer {
   padding: 1rem;
   font-size: 0.85rem;
   background-color: #000;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .feature-grid,
+  .responsive-grid,
+  .logo-strip {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-grid div,
+  .logo-strip img {
+    max-width: 90%;
+    margin-bottom: 1rem;
+  }
+
+  .cta-button {
+    font-size: 0.95rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .sticky-cta {
+    padding: 0.75rem;
+  }
+
+  .hero {
+    height: 60vh;
+  }
+
+  .overlay {
+    padding: 1rem;
+  }
+}
+
+.cta-below-hero {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+
+@media (max-width: 768px) {
+  .cta-below-hero {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
 }
