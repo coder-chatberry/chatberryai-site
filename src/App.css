@@ -28,7 +28,7 @@ body {
 
 /* Hero section with logo */
 .hero {
-  height: 50vh; /* Occupy half the viewport height */
+  height: 40vh; /* Occupy half the viewport height */
   width: 100%; /* Full width */
   display: flex;
   justify-content: center;
@@ -41,6 +41,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: contain; /* Ensure the image scales properly without cropping */
+  margin-bottom: 70px;
 }
 
 /* Transparent overlay box over logo */
@@ -57,9 +58,9 @@ body {
 
 .tagline {
   color: #ffffff;
+  font-size: large;
   font-weight: bold;
-  font-size: 1.2rem;
-  margin: 0;
+
 }
 
 /* CTA button styling */
@@ -77,10 +78,20 @@ body {
   background-color: #ff52b0;
 }
 
+.second-section {
+  background-image: url('./images/nuestros-productos-bg.png');
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+  color: white;
+  position: relative;
+}
+
+
 /* Product features */
 .features {
-  background-color: #1c1d3a;
   padding: 2rem;
+  opacity: 0.7;
 }
 
 .feature-grid,
@@ -98,8 +109,11 @@ body {
 
 /* How it works */
 .how-it-works {
-  background-color: #0b0c2a;
   padding: 2rem;
+  opacity: 0.8;
+  color: #ff52b0;
+  font-weight: bold;
+  font-size: large;
 }
 
 .how-it-works ol {
@@ -110,8 +124,10 @@ body {
 
 /* Trusted by section */
 .trust {
-  background-color: #1c1d3a;
   padding: 2rem;
+  opacity: 0.8;
+  font-weight: bold;
+  font-size: large;
 }
 
 .logo-strip {
@@ -129,8 +145,8 @@ body {
 
 /* Contact form */
 .contact {
-  background-color: #1c1d3a;
   padding: 2rem;
+  opacity: 0.8;
 }
 
 .contact div {
