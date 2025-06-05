@@ -62,8 +62,13 @@ function App() {
       </section>
 
       <footer>
-        <p>© 2025 ChatberryAI. Todos los derechos reservados.</p>
-      </footer>
+      <p>© 2025 ChatberryAI. Todos los derechos reservados.</p>
+      <div className="social-icons">
+        <a href="https://x.com/yourprofile" target="_blank" rel="noopener noreferrer"><i className="fab fa-x-twitter"></i></a>
+        <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com/company/yourprofile" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
+      </div>
+    </footer>
     </div>
   );
 }
