@@ -1,14 +1,15 @@
 import './App.css';
-import backgroundLogo from './images/chatberry-logo.jpeg';
-
+import backgroundLogo from './images/chatberry-logo.png';
 function App() {
+  
   return (
     <div className="App">
       <div className="sticky-cta" style={{ marginTop: '1rem' }}>
         <a href="#contact" className="cta-button">Solicitar una Demo Gratis</a>
       </div>
 
-      <header className="hero hero-bg" style={{ backgroundImage: `url(${backgroundLogo})` }}>
+      <header className="hero">
+        <img src={backgroundLogo} alt="ChatberryAI Logo" />
         <div className="overlay">
           <p className="tagline">Agentes de IA Modernos para Voz y Mensajería</p>
         </div>
@@ -52,12 +53,12 @@ function App() {
 
       <section id="contact" className="contact">
         <h2>Contáctanos</h2>
-        <form>
+        <div>
           <input type="text" placeholder="Nombre" required />
           <input type="email" placeholder="Correo electrónico" required />
           <textarea placeholder="Cuéntanos sobre tu proyecto..." required></textarea>
-          <button type="submit">Enviar</button>
-        </form>
+          <button>Enviar</button>
+        </div>
       </section>
 
       <footer>
